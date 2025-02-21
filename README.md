@@ -1,10 +1,10 @@
 <p align="center">
 <a href="https://res.cloudinary.com/dozr5pfwt/image/upload/v1740172405/ctp6fi3dxlbonaubzfrg.png">
- <img width="500px" height="200px" src="https://res.cloudinary.com/dozr5pfwt/image/upload/v1735912458/w56gfxnku52f4mirc6im.jpg" alt="Project logo">
+ <img width="500px" height="400px" src="https://res.cloudinary.com/dozr5pfwt/image/upload/v1740172405/ctp6fi3dxlbonaubzfrg.png" alt="Project logo">
  </a>
 </p>
 
-<h1 align="center">Sakan
+<h1 align="center">Trash To Cash
 </h1>
 
 ---
@@ -108,12 +108,8 @@ With **Trash to Cash**, recycling is easier, more accessible, and rewarding!
 - [Node JS](https://nodejs.org/en/) - Server Environment
 
 ## 📖 User Story&#x20;
-
 Trello
 https://trello.com/b/gzLNmTS4/impactcoder
-## 🔄 Data Flow&#x20;
-
-
 
 ## ⚠️ Guided By&#x20;
 
