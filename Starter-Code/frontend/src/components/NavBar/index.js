@@ -28,13 +28,9 @@ const Navbar = () => {
       <div className="upper-nav text-white d-flex justify-content-center align-items-center">
         <span>Recycling isn't just good for the planet—it can also put money in your pocket!</span>
       </div>
-
-      {roleId !== 1 && (
-
       {(roleId !== 1 || roleId!==3) && (
-
         <nav className="navbar navbar-expand-lg bg-white shadow-sm" style={{ height: "100px" }}>
-          <div className="container d-flex align-items-center">
+          <div className="container d-flex align-items-center" style={{marginLeft:"0px"}}>
             <Link
               to="/"
               style={{
@@ -63,7 +59,9 @@ const Navbar = () => {
                 Trash2Cash
               </h1>
             </Link>
-            <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
+            {/* ! */}
+            <div className="collapse navbar-collapse justify-content-center" id="navbarNav"
+            style={{marginLeft:"400px"}}>
               <ul className="navbar-nav text-center nav-menu">
                 <li className="nav-item px-3">
                   <Link className="nav-link nav-hover" to="/">
@@ -82,23 +80,21 @@ const Navbar = () => {
                     </Link>
                   </li>
                 )}
-                <li className="nav-item px-3">
-
-                  <Link className="nav-link nav-hover" to="/contact">
-
+                <li className="nav-item px-3" style={{width:"205px"}}>
                   <a className="nav-link nav-hover" href="#footer">
-
                     Contact Us
-                  </Link>
+                  </a>
                 </li>
                 {isLoggedIn ? (
-                  <>
-                    <li className="nav-item px-3">
+                  <div style={{marginLeft:"430px",display:"flex"}} >
+                    <li className="nav-item px-3" >
                       <Link className="nav-link nav-hover" to="/cart">
                         <FaShoppingCart className="icon-blue" />
                       </Link>
                     </li>
-                    <li className="nav-item px-3 dropdown" ref={dropdownRef}>
+                    <li className="nav-item px-3 dropdown" ref={dropdownRef}
+                    //  style={{marginLeft:"650px"}}
+                     >
                       <div
                         className="nav-link nav-hover"
                         onClick={() => setShowDropdown(!showDropdown)}
@@ -130,9 +126,9 @@ const Navbar = () => {
                         </div>
                       )}
                     </li>
-                  </>
+                  </div>
                 ) : (
-                  <li className="nav-item px-3">
+                  <li className="nav-item px-3" style={{marginLeft:"650px"}} >
                     <Link className="nav-link nav-hover" to="/login">
                       Login
                     </Link>
@@ -163,7 +159,7 @@ const Navbar = () => {
           margin-right: 5px;
         }
         .nav-menu {
-          font-size: 25px;
+          font-size:30px;
           font-weight: bold;
         }
         .dropdown-menu {
