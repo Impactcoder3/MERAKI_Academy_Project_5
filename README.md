@@ -1,10 +1,10 @@
 <p align="center">
 <a href="https://res.cloudinary.com/dozr5pfwt/image/upload/v1740172405/ctp6fi3dxlbonaubzfrg.png">
- <img width="500px" height="300px" src="https://res.cloudinary.com/dozr5pfwt/image/upload/v1740172405/ctp6fi3dxlbonaubzfrg.png" alt="Project logo">
+ <img width="500px" height="350px" src="https://res.cloudinary.com/dozr5pfwt/image/upload/v1740172405/ctp6fi3dxlbonaubzfrg.png" alt="Project logo">
  </a>
 </p>
 
-<h1 align="center">Sakan
+<h1 align="center">Trash To Cash
 </h1>
 
 ---
