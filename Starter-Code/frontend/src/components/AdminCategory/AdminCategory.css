@@ -332,7 +332,7 @@ margin-top: 30px;
 
 .form-input[type="number"] {
   max-width: 200px;
-  -moz-appearance: textfield;
+  /* -moz-appearance: textfield; */
 }
 
 .form-input[type="number"]::-webkit-outer-spin-button,
