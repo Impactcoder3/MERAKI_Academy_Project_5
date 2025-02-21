@@ -108,12 +108,8 @@ With **Trash to Cash**, recycling is easier, more accessible, and rewarding!
 - [Node JS](https://nodejs.org/en/) - Server Environment
 
 ## 📖 User Story&#x20;
-
 Trello
 https://trello.com/b/gzLNmTS4/impactcoder
-## 🔄 Data Flow&#x20;
-
-
 
 ## ⚠️ Guided By&#x20;
 
