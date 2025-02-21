@@ -101,6 +101,7 @@ With **Trash to Cash**, recycling is easier, more accessible, and rewarding!
 
 Trello
 https://trello.com/b/gzLNmTS4/impactcoder
+## 🔄 Data Flow&#x20;
 
 
 
