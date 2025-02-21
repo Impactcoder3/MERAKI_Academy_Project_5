@@ -6,7 +6,6 @@ import { setCurrentCategory } from "../../redux/reducers/userCategory";
 //put current category info into store
 import CurrentCategory from "./CurrentCategory";
 import "./user.css";
-
 const UserCategory = () => {
   const state = useSelector((state) => state);
   const Navigate = useNavigate();
@@ -14,7 +13,6 @@ const UserCategory = () => {
   const [allCategories, setAllCategories] = useState([]);
   const currentCategory = useSelector((selector) => selector);
   console.log(currentCategory);
-
   useEffect(() => {
     axios
       .get("http://localhost:5000/category/getAllCategories")
@@ -26,17 +24,15 @@ const UserCategory = () => {
         console.log(error);
       });
   }, []);
-
   return (
     <div className="categoryPage" >
       <div className="categorySection ">
         {allCategories.map((ele, i) => {
           console.log(ele);
-
           return (
             <div
               key={i}
-              className="catElement card col-m-10" style={{height:"520px"}} 
+              className="catElement card col-m-10" style={{height:"520px"}}
             >
               <img className="categoryImg card-img-top" src={ele.image} style={{height:"300px"}} />
               <p className="title-1 card-title">{ele.category_name}</p>
@@ -46,10 +42,8 @@ const UserCategory = () => {
                 style={{backgroundColor:"#3A9E1E",border:"#3A9E1E"}}
                 onClick={() => {
                   console.log(ele);
-
                   dispatch(setCurrentCategory(ele));
                   Navigate(`/currentCategory`);
-
                   console.log(state);
                 }}
               >
@@ -62,5 +56,4 @@ const UserCategory = () => {
     </div>
   );
 };
-
 export default UserCategory;
