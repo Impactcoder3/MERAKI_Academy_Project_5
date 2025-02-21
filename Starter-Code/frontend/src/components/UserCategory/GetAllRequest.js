@@ -88,24 +88,7 @@ const updateRequest=(id,category_id)=>{
 
 return (
     <div>
-        <DataGrid
-columnGroupingModel={[
-    {
-    groupId: 'internal data',
-    children: [{ field: 'id' }],
-    },
-    {
-      groupId: 'character',
-      children: [
-        {
-          groupId: 'naming',
-          children: [{ field: 'lastName' }, { field: 'firstName' }],
-        },
-        { field: 'age' },
-      ],
-    },
-  ]}
-/>
+        
         
         {
     state.userRequest.requests.map((ele,i)=>{

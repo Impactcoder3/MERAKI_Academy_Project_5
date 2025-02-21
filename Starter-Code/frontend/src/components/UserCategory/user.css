@@ -1,19 +1,8 @@
-/* *{
-    box-sizing: content-box;
-    margin: 0;
-    padding: .5%;
-    font-size: 15px;
-    font-weight: 700;
-} */
-
 .categoryPage{
     width:100%;
     /* min-height: 1500px; */
     height: 1700px;
-
-    
 }
-
 .categorySection{
     width: 90%;
     display: grid;
@@ -25,8 +14,6 @@
     right: 5%;
     left: 5%;
 }
-
-
 .img1{
     width: 30rem;
     height:30rem;
@@ -34,21 +21,17 @@
 .p1{
     background-color: #14A44D;
 }
-
 .section1{
     margin-top: 5%;
     gap: 3%;
     width: 80%;
-    
     display: flex;
     flex-direction: row;
     position: relative;
     right: 10%;
     left: 10%;
 }
-
 .catElement{
-
     padding: 2%;
     border-radius: 2% ;
     width:80%;
@@ -57,14 +40,12 @@
     cursor: pointer;
     border: transparent;
 }
-
-    
 .categoryImg{
     width: 12rem;
     height: 12rem;
 }
 .card{
-    border: #9aa414 2px solid;
+    border: #9AA414 2px solid;
 }
 .title-1{
     font-size: 2rem;
@@ -73,10 +54,8 @@
 .description-1{
     font-size: 1.5rem;
 }
-
 .pre-category{
     width: 100%;
-
 }
 .header-category{
     margin-top: 3%;
@@ -85,36 +64,31 @@
 }
 .btn {
     width: 50%;
-
 }
-
-
 .img{
     width: 20%;
     height: 20%;
     border: #14A44D solid 2px;
 }
 .Page{
-    background-color: #d2d1cf;
+    background-color: #D2D1CF;
     padding: 1%;
     font-size: 15px;
-    font-weight: 700;
+
     height: 100%;
 }
-.req1 , .card1 , .reqSection{
-
+ .reqSection, .card1 , .reqSection{
     position: relative;
-    left: 10%;
-    right: 10%;
+    left: 5%;
+    right: 5%;
     margin-top: 1%;
     height: 30%;
-    border: #14A44D solid 2px;
+  
 }
 .card1{
     height: 20%;
+
 }
-
-
 .form1{
     font-size: 2rem;
     background-color: #14A44D;
@@ -142,7 +116,7 @@ input{
     row-gap: 3%;
     column-gap: 3%;
     padding: 5%;
-} 
+}
 .img2{
     height:19rem;
     width: 20rem;
@@ -151,18 +125,16 @@ input{
     display: flex;
     gap: 2%;
 }
-
 .footer{
-    width: 50%;
+    width: 70%;
     height: 10%;
 }
 .price{
-    color: #d2d1cf;
+    color: #D2D1CF;
     font-size: 1rem;
     initial-letter: .5rem;
 }
 /* ********************** */
 .p2{
     font-family: 'Poppins', sans-serif;
-
 }

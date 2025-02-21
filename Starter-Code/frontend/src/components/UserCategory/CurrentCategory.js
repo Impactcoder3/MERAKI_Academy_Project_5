@@ -77,15 +77,15 @@ const CurrentCategory = () => {
       });
   };
   return (
-    <div className="Page" style={{ backgroundColor: "#F7FFEE" }}>
+    <div className="Page" style={{ backgroundColor: "#F7FFEE",color: "#0E1D40" }}>
       <MDBCard
-        style={{ maxWidth: "80%", border: " transparent" }}
+        style={{ maxWidth: "90%", border: " transparent",color: "#0E1D40"}}
         className="card1"
       >
-        <MDBRow>
+        <MDBRow style={{display:"flex",rowGap:"5%",justifyContent:"space-around" }}>
           <MDBCol md="2">
             <MDBCardImage
-              style={{ padding: "12px", borderTopRightRadius: "14px" }}
+              style={{ padding: "12px", borderTopRightRadius: "14px"}}
               className="img2"
               src={category_.picture_details}
               alt="..."
@@ -113,9 +113,10 @@ const CurrentCategory = () => {
       <div
         className="reqSection"
         style={{
-          maxWidth: "80%",
+          maxWidth: "90%",
           maxHeight: "80%",
           backgroundColor: "#3A9E1E",
+          color: "#0E1D40"
         }}
       >
         <div
@@ -127,20 +128,23 @@ const CurrentCategory = () => {
             backgroundColor: "#ffffff",
             padding: "12px",
             borderTopRightRadius: "14px",
+            display:"flex",
+            flexDirection:"column",
+            rowGap:"10%"
           }}
         >
           {/* <p>order a worker to pick up your trash:</p> */}
           {categoryNameInKg.includes(categoryName) && (
             <MDBInputGroup
               className="mb-3"
-              textBefore="weight"
-              style={{ fontWeight: "800", fontSize: "15px", maxWidth: "50%" }}
+              textBefore="Weight:"
+              style={{ fontWeight: "800", fontSize: "15px", maxWidth: "50%",fontSize:"30%"}}
             >
               <input
-                style={{ border: "2px solid gray" }}
+                style={{ border: "2px solid #3A9E1E",borderRadius:"3%" }}
                 className="form-control"
                 type="number"
-                placeholder="weight"
+                placeholder="Weight"
                 onChange={(e) => {
                   setRequest({ ...request, weight: e.target.value });
                 }}
@@ -149,9 +153,9 @@ const CurrentCategory = () => {
           )}
           {categoryNameInHight.includes(categoryName) && (
             <div>
-              <MDBInputGroup className="mb-3" textBefore="length">
+              <MDBInputGroup className="mb-3" textBefore="length" >
                 <input
-                  style={{ border: "2px solid gray" }}
+                   style={{ border: "2px solid #3A9E1E",borderRadius:"3%" }}
                   className="form-control"
                   type="number"
                   maxLength="3"
@@ -166,7 +170,7 @@ const CurrentCategory = () => {
 
               <MDBInputGroup className="mb-3" textBefore="width">
                 <input
-                  style={{ border: "2px solid gray" }}
+                    style={{ border: "2px solid #3A9E1E",borderRadius:"3%" }}
                   className="form-control"
                   type="number"
                   id="width"
@@ -180,7 +184,7 @@ const CurrentCategory = () => {
               </MDBInputGroup>
               <MDBInputGroup className="mb-3" textBefore="height:">
                 <input
-                  style={{ border: "2px solid gray" }}
+                     style={{ border: "2px solid #3A9E1E",borderRadius:"3%" }}
                   className="form-control"
                   type="number"
                   id="width"
@@ -196,7 +200,7 @@ const CurrentCategory = () => {
           )}
           <MDBInputGroup className="mb-3" textBefore="Description:">
             <textarea
-              style={{ border: "2px solid gray" }}
+                style={{ border: "2px solid #3A9E1E",borderRadius:"3%" }}
               className="l1"
               onChange={(e) => {
                 setRequest({ ...request, description: e.target.value });
@@ -221,9 +225,9 @@ const CurrentCategory = () => {
           style={{ color: "#ffffff", backgroundColor: "#ffffff", width: "1%" }}
         />
         <div className="footer">
-          <p className="price" style={{ fontSize: "1.5rem", color: "#0E1D40" }}>
+          <h2 className="price p2" style={{ fontSize: "1.5rem", color: "#0E1D40",fontWeight:"800"}}>
             Instractions:
-          </p>
+          </h2>
           <ul
             class="space-y-2"
             style={{
@@ -290,8 +294,8 @@ const CurrentCategory = () => {
               <span class="ml-2">Check out the next process in your card</span>
             </li>
           </ul>
-          <p className="price">
-            total Price:{" "}
+          <h2 className="price p2"  style={{fontSize:"1.5rem"}} >
+            total Price: <span  style={{backgroundColor:"white" ,color:"#0E1D40" ,width:"30%"}}>{" "}
             {
               request.weight &&
                 request.weight *
@@ -303,8 +307,8 @@ const CurrentCategory = () => {
               request.length *
                 request.height *
                 request.width *
-                category_.price_per_dimensions}
-          </p>
+                category_.price_per_dimensions}</span>
+          </h2>
         </div>
       </div>
 
