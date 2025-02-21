@@ -86,12 +86,13 @@ export default function DashboardLayoutBasic(props) {
   const [rows, setRows] = useState([]);
   const [status, setStatus] = useState();
   const authToken = useSelector((reducers) => reducers.authReducer.token);
-
   const history = useNavigate();
+
+ 
   const NAVIGATION1 = [
   
     {
-      segment: "categories",
+      segment: "/categories",
       title: "Categories",
       icon: <CategoryIcon />,
     },
@@ -178,6 +179,7 @@ export default function DashboardLayoutBasic(props) {
     if (element) {
       element.textContent = 'Trash2Cash';
     }
+    
   }, []);
 
   const orders = useSelector((reducers) => reducers.adminOrdersReducer.orders);
@@ -269,7 +271,11 @@ export default function DashboardLayoutBasic(props) {
       }));
       setRows(rowsData);
     }
+  
   }, [orders, collectorOrders]);
+ 
+  
+  
 
   const { window } = props;
 
@@ -283,13 +289,20 @@ export default function DashboardLayoutBasic(props) {
       event.defaultMuiPrevented = true;
     }
   };
-
+  useEffect(() => {
+    if (router.pathname === "/dashboard") {
+      const defaultPath = roleId === 1 ? "/categories" : "/orders";
+      router.navigate(defaultPath);
+    }
+  }, [router, roleId]);
+  
   const handleEditClick = (id) => () => {
     setRowModesModel({ ...rowModesModel, [id]: { mode: GridRowModes.Edit } });
   };
 
   const handleSaveClick = (id) => () => {
     setRowModesModel({ ...rowModesModel, [id]: { mode: GridRowModes.View } });
+    getAllOrders()
   };
 
   const handleCancelClick = (id) => () => {
