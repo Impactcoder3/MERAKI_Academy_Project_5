@@ -32,14 +32,16 @@ const UserCategory = () => {
           return (
             <div
               key={i}
-              className="catElement card col-m-10" style={{height:"520px"}}
+              className="catElement card col-m-10" style={{height:"100%",display:"grid", gridTemplateRows:"55% auto 10%",float:"left" }}
             >
-              <img className="categoryImg card-img-top" src={ele.image} style={{height:"300px"}} />
-              <p className="title-1 card-title">{ele.category_name}</p>
-              <p className="description-1 card-text">{ele.description}</p>
+              <img className="categoryImg card-img-top" src={ele.image} style={{height:"250px",width:"100%"}} />
+              <div>
+              <h2 className="title-1 card-title" style={{width:"100%"}}>{ele.category_name}</h2>
+              <p className="description-1 card-text" style={{width:"100%"}}>{ele.description}</p>
+              </div>
               <button
                 className="btn btn-default btn-success"
-                style={{backgroundColor:"#3A9E1E",border:"#3A9E1E"}}
+                style={{backgroundColor:"#3A9E1E",border:"#3A9E1E",}}
                 onClick={() => {
                   console.log(ele);
                   dispatch(setCurrentCategory(ele));
@@ -47,7 +49,7 @@ const UserCategory = () => {
                   console.log(state);
                 }}
               >
-                 More Details
+                More Details
               </button>
             </div>
           );
