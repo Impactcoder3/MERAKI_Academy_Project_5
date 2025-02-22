@@ -29,7 +29,7 @@ const CurrentCategory = () => {
   console.log(state.authReducer.token);
   const categoryName = state.userCategory.currentCategory.category_name;
   console.log(categoryName);
-
+const style= {color:"green"}
   const category_ = state.userCategory.currentCategory;
   const [request, setRequest] = useState({});
   const categoryNameInKg = [
@@ -212,14 +212,21 @@ const CurrentCategory = () => {
             style={{ backgroundColor: "#F3B811" }}
             onClick={(event) => {
               event.preventDefault();
-              setRequest({ ...request, order_id: 8 });
-              setRequest({ ...request, category_id_id: 8 });
-              createRequest();
+              if(request.weight && request.description|| request.length && request.height&& request.width&& request.description){
+                setRequest({ ...request, order_id: 8 });
+                setRequest({ ...request, category_id_id: 8 });
+                createRequest();
+                setMessage("your request created successfully")
+              }
+              else{
+                setMessage("please fill all of requirements")
+                style.color = "red"
+              }    
             }}
           >
             Create Request
           </button>
-          <p>{message}</p>
+          <p style={style}>{message}</p>
         </div>
         <hr
           style={{ color: "#ffffff", backgroundColor: "#ffffff", width: "1%" }}
@@ -312,32 +319,6 @@ const CurrentCategory = () => {
         </div>
       </div>
 
-      {/*  {categoryNameInKg.includes(categoryName)&&
-        <div className='l1'><label for="weight">weight: <input id='
-        weight' placeholder= "weight" onChange={(e)=>{
-        setRequest({...request,weight:e.target.value})
-        }}/> Kg
-        </label></div>}
-        {categoryNameInHight.includes(categoryName)&&
-        <div className='l1'>
-        <label   for="length">length:<input maxLength ="3" minlength="1" placeholder= "length" id='length' onChange={(e)=>{
-        setRequest({...request,length:e.target.value})
-        }} />
-        M
-            </label><br/>
-        <label   for="width">width: <input id='width' maxLength ="3" minlength="1" placeholder= "width" onChange={(e)=>{
-        setRequest({...request,width:e.target.value})
-        }}/> M
-        </label><br/>
-        <label  className='l1' for="width">height: <input id='width' maxLength ="3" minlength="1" placeholder= "width" onChange={(e)=>{
-        setRequest({...request,height:e.target.value})
-        }}/> M
-        </label><br/>
-        </div>} */}
-      {/*  <br/><label  className='l1'>Description :</label><br/>
-        <textarea   className='l1' onChange={(e)=>{
-        setRequest({...request,description:e.target.value})
-        }}></textarea><br/> */}
     </div>
   );
 };
